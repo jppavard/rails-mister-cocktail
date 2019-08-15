@@ -12,15 +12,15 @@ Cocktail.destroy_all
 require "json"
 
 file = File.read("db/list.json")
-cocktails = JSON.parse(file)
+ingredients = JSON.parse(file)
 
 puts "creating seeds...."
 
-cocktails["drinks"].each do |drinks|
+ingredients["drinks"].each do |drinks|
   drinks.each do |key, value|
-    Cocktail.create!(name: value)
+    Ingredient.create!(name: value)
   end
 end
 
 
-puts "cocktails created!"
+puts "ingredients created!"

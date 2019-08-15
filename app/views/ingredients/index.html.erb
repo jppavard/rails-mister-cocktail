@@ -1,0 +1,14 @@
+
+<h1>Find the ingredient of your life</h1>
+
+ <div class="cards">
+  <% @ingredients.each do |ingredient| %>
+    <div class="card">
+        <div class="card-container">
+          <h3><a href='/ingredients/<%= ingredient.id %>'> <%= ingredient.name %></a></h3>
+
+        </div>
+    </div>
+  <% end %>
+</div>
+

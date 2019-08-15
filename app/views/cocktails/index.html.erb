@@ -1,11 +1,12 @@
 
-<h1>Cocktails</h1>
+<h1>Find all our cocktail</h1>
 
  <div class="cards">
   <% @cocktails.each do |cocktail| %>
     <div class="card">
         <div class="card-container">
-          <h3> <%= cocktail.name %> </h3>
+          <h3><a href='/cocktails/<%= cocktail.id %>'> <%= cocktail.name %></a></h3>
+
         </div>
     </div>
   <% end %>
