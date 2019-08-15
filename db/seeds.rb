@@ -5,3 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts 'Cleaning database...'
+Ingredient.destroy_all
+Cocktail.destroy_all
+
+require "json"
+
+file = File.read("db/list.json")
+cocktails = JSON.parse(file)
+
+puts "creating seeds...."
+
+cocktails["drinks"].each do |drinks|
+  drinks.each do |key, value|
+    Cocktail.create!(name: value)
+  end
+end
+
+
+puts "cocktails created!"
