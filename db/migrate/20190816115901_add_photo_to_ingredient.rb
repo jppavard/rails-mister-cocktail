@@ -1,4 +1,4 @@
-class AddPhotoToIngredients < ActiveRecord::Migration[5.2]
+class AddPhotoToIngredient < ActiveRecord::Migration[5.2]
   def change
     add_column :ingredients, :photo, :string
   end
