@@ -1,14 +1,20 @@
+<h1>Find all our cocktails</h1>
+<div class="container">
 
-<h1>Find all our cocktail</h1>
+  <div class="cards">
 
- <div class="cards">
-  <% @cocktails.each do |cocktail| %>
-    <div class="card">
-        <div class="card-container">
-          <h3><a href='/cocktails/<%= cocktail.id %>'> <%= cocktail.name %></a></h3>
-
+        <% @cocktails.each do |cocktail| %>
+        <div class="card">
+          <div class="col-sm card-container m-1" style="background-image: url('<%=cl_image_path cocktail.photo.url %>')">
+              <h3><a href='/cocktails/<%= cocktail.id %>'> <%= cocktail.name %></a></h3>
+              <% cocktail.ingredients.each do |ingredient|%>
+                <p><%= ingredient.name %>
+              <% end %>
+             </p>
+          </div>
         </div>
+      <% end %>
+      </div>
     </div>
-  <% end %>
+  </div>
 </div>
-

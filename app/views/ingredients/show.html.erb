@@ -1,7 +1,7 @@
 <h1>Ingredient </h1>
 
-<div class="ingredient" style="height: 50vh; background-position: center; background-image: url('<%=cl_image_path @ingredient.photo %>')">
-
+<div class="ingredient" style="height: 50vh; background-position: center;
+background-image: url('<%=cl_image_path @ingredient.photo.url %>')">
 <p>
   <strong>Name:</strong>
   <%= @ingredient.name %> <br>
