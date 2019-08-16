@@ -7,15 +7,15 @@
   <div class="doses">
     <div class="dose">
         <p>
-          <strong>dose name:</strong>
+          <strong>Ingredients needed</strong>
           <% @cocktail.doses.each do |dose|%>
-          <p><%= dose.amount %></p>
-          <p><%= dose.description %></p>
-          <p><%= dose.ingredient.name %></p>
-          <%= link_to 'delete', dose_path(dose),
+          <p><%= dose.description %> of <%= dose.ingredient.name %>
+            <%= link_to 'delete', dose_path(dose),
                           method: :delete,
                           data: {:confirm => "You sure?" } %>
           <% end %>
+           </p>
+
         </p>
 
     </div>
