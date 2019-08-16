@@ -1,12 +1,10 @@
 <h1>Ingredient </h1>
 
+<div class="ingredient" style="height: 50vh; background-position: center; background-image: url('<%=cl_image_path @ingredient.photo %>')">
+
 <p>
   <strong>Name:</strong>
   <%= @ingredient.name %> <br>
-  <%= cl_image_tag("ufwold8ccyfuxdjx7heg.jpg",
-      width: 400, height: 300, crop: :fill) %>
-  <%= cl_image_tag @ingredient.photo,
-      width: 400, height: 300, crop: :fill %>
 </p>
 
 
